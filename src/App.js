@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import FetchApi from './api/fetch';
 
 function App() {
+
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
   }, []);
   
 console.log(videos)
+
 
   return (
     <div className="App">
