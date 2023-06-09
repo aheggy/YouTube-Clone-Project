@@ -17,7 +17,7 @@ export default function VideoIndex({ videos }) {
           );
         })
       ) : (
-        <div>Some type of message</div>
+        <div className="search-message">No Search Results Yet!, Okease submit a search above!</div>
       )}
     </div>
   );
