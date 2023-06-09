@@ -19,3 +19,19 @@
   margin-top: 10px;
   text-align: center;
 }
+
+
+.search-message{
+  background-color: #d5d8d9;
+  width: 800px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+
+.video-index:empty + .search-message {
+  display: flex;
+  justify-content: center;
+}
