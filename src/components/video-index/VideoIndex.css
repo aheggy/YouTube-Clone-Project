@@ -1,37 +1,33 @@
-.video-index {
+.video-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
 }
 
 .video-item {
+  margin: auto;
+  width: 70%;
+}
+
+.thumbnail-image {
   width: 100%;
+  height: 300px;
 }
 
-.video-img {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-}
-
-.video-description {
+.video-title {
+  font-weight: bold;
+  font-size: 18px;
   margin-top: 10px;
-  text-align: center;
 }
 
-
-.search-message{
-  background-color: #d5d8d9;
-  width: 800px;
-  height: 50px;
+.video-index {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: large;
 }
 
-.video-index:empty + .search-message {
-  display: flex;
-  justify-content: center;
+.search-message {
+  background-color: #d5d8d9;
+  padding: 20px;
+  width: 70%;
+  text-align: center;
 }
