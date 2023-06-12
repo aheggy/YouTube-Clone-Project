@@ -1,33 +1,35 @@
-import "./App.css";
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
-import SearchBar from "./components/search/SearchBar.js";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import SearchBar from "./components/search/SearchBar";
 import VideoIndex from "./components/video-index/VideoIndex";
+import VideoShow from "./components/video-index/VideoShow";
 import Navbar from "./components/navbar/Navbar";
 import About from "./components/about/About";
 import Modal from "./components/modal-window/Modal";
+
 
 function App() {
   const [videos, setVideos] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  console.log(videos);
+  console.log(videos)
 
   return (
     <Router>
       <div className="App">
-        <Navbar className="navbar" />
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <SearchBar
-              className="searchBar"
-              setVideos={setVideos}
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
+              setVideos={setVideos}
             />
-            <VideoIndex className="videoIndex" videos={videos} />
+            <VideoIndex videos={videos} />
           </Route>
-          <Route path="/about" component={About} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/videos" component={VideoIndex} />
+          <Route path="/videos/:id" component={VideoShow} />
           <Route path="/*" component={Modal} />
         </Switch>
       </div>

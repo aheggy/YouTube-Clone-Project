@@ -1,23 +1,29 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import "./VideoIndex.css";
-import VideoShow from "./VideoShow";
 
 export default function VideoIndex({ videos }) {
   return (
     <div className="video-index">
       {videos.length > 0 ? (
-        videos.map((video) => {
-          let videoId = video.id.videoId;
-          let thumbnail = video.snippet.thumbnails.high.url;
-          let title = video.snippet.title;
+        <div className="video-list">
+          {videos.map((video) => {
+            const videoId = video.id.videoId;
+            const thumbnail = video.snippet.thumbnails.high.url;
+            const title = video.snippet.title;
 
-          return (
-            <div key={videoId} className="video-item">
-              <VideoShow videoId={videoId} thumbnail={thumbnail} title={title} />
-            </div>
-          );
-        })
+            return (
+              <div key={videoId} className="video-item">
+                <Link to={`/videos/${videoId}`}>
+                  <img src={thumbnail} alt={title} className="thumbnail-image" />
+                </Link>
+                <div className="video-title">{title}</div>
+              </div>
+            );
+          })}
+        </div>
       ) : (
-        <div className="search-message">No Search Results Yet!, Okease submit a search above!</div>
+        <div className="search-message">No Search Results Yet! Please submit a search above!</div>
       )}
     </div>
   );

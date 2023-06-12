@@ -1,28 +1,30 @@
-.video-img {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .video-img img {
-    width: 100%;
-    height: auto;
-    max-width: 400px; /* Adjust the max width as needed */
-    max-height: 250px; /* Adjust the max height as needed */
-  }
-  
-  .video-description {
-    margin-top: 10px;
-    text-align: center;
-  }
+.video-player {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+}
 
-  .video-item{
-    align-items: center;
-    padding: auto;
-    margin: auto;
+.video-show {
+  text-align: center;
+}
 
-  }
+.share-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
 
+.share-button button {
+  font-size: large;
+  padding: 0 15px;
+}
 
-  
+.copied-message {
+  background-color: #d1e6dd;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 200px;
+  margin-top: 10px;
+}

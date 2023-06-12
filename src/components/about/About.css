@@ -7,7 +7,7 @@ color: rgb(7,54,44);
 }
 
 footer {
-    position: fixed; /* stickey*/
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -39,6 +39,7 @@ body{
 }
 
 .about-message {
+  text-align: center;
   background-color: rgba(255, 227, 227, 0.934);
   width: 100%;
 }
